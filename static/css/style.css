@@ -1,0 +1,324 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    background: black;
+    margin: 20px;
+    scrollbar-width: none;    
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+  }
+
+#Wrapper{
+    font-family: 'NanumSquareNeo-Variable';
+    max-width: 640px;
+    padding: 30px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    min-height: 90vh;
+}
+
+/*Header*/
+
+#Header{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    font-weight: 1000;
+    font-size: 3rem;
+}
+
+
+#HeaderBackBtn{
+    height:100%;
+    border: none;
+    background: none;
+    font-size: 3rem;
+    cursor:pointer;
+}
+
+#HeaderTitle{
+    height: 30px;
+}
+
+#HeaderTitle img{
+    height: 100%;
+    width: auto;
+}
+
+/*List*/
+
+#ListAddBtn{
+    width: 100%;
+    margin-top: 30px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#ListItem{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow:4px 4px 12px 2px rgba(0,0,0,0.14);
+}
+
+#ListItem:hover{
+    cursor: pointer;
+}
+
+#ListItemImage{
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+
+#ListItemTitle{
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    padding: 15px 30px;
+    font-weight: 800;
+}
+
+#ListItemContent{
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    padding: 15px 30px;
+}
+
+#ListItemImage{
+    height:150px;
+}
+
+#ListItemImage img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+/*Edit*/
+
+#EditImage{
+    height: 300px;
+    width: 100%;
+}
+
+#EditImage img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+#EditTitle input{
+    font-family: 'NanumSquareNeo-Variable';
+    width: 100%;
+    height: 30px;
+    margin-top: 60px;
+    font-size: 2rem;
+    font-weight:800;
+    border: none;
+}
+
+#EditTitle input:focus{
+    outline: none;
+}
+
+#EditContent textarea{
+    font-family: 'NanumSquareNeo-Variable';
+
+    width: 100%;
+    height: 100px;
+    margin-top: 30px;
+    font-size: 1rem;
+    border: none;
+    resize: none;
+}
+
+#EditContent textarea:focus{
+    outline: none;
+}
+
+#EditAddBtn{
+    width: 100%;
+    margin-top: 30px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/*Show*/
+
+#ShowImage{
+    height: 300px;
+    width: 100%;
+}
+
+#ShowImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+#ShowTitle{
+    margin-top: 60px;
+    font-size: 2rem;
+    font-weight:800;
+}
+
+#ShowContent{
+    margin: 15px 0;
+    overflow-wrap: anywhere;
+}
+
+#ShowContent p{
+    text-align: right;
+}
+
+#ShowBtns{
+    display: flex;
+    justify-content: right;
+}
+
+#ShowEditBtn, #ShowDeleteBtn{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#ShowEditBtn img, #ShowDeleteBtn img{
+    width: 100%;
+    height: auto;
+}
+
+#ShowComment{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+#ShowCommentItem{
+    overflow-wrap: anywhere;
+}
+
+#ShowCommentDeleteBtn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#ShowWrite{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+#ShowWrite input{
+    width: 100%;
+    height: 30px;
+    margin-right: 15px;
+    padding-left: 15px;
+    background-color: #F1F3F5;
+    border: none;
+    border-radius: 10px;
+}
+
+#ShowWrite input:focus{
+    outline: none;
+}
+
+#ShowWriteBtn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#ShowAlert{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.2)
+}
+
+#ShowAlertMessage{
+    width: 300px;
+    padding: 10% 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow:4px 4px 12px 2px rgba(0,0,0,0.14);
+    transform: translate(-50%, -50%);
+}
+
+#ShowAlertMessage button{
+    height: 30px;
+    width: 40%;
+    margin: 10% 1% 0 1%;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#ShowAlertDeleteBtn{
+    background: black;
+}
+
+#ShowAlertDeleteBtn:hover{
+    background:#818589;
+}
+
+#ShowAlertCancleBtn{
+    background:#A9A9A9;
+}
+
+#ShowAlertCancleBtn:hover{
+    background:#C0C0C0;
+}
+
+/*NotFound*/
+#NotFoundBtn{
+    width: 250px;
+    height: 30px;
+    margin-top: 15px;
+    background:  #e2e2e2;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#NotFoundBtn:hover{
+    background:  #d3d3d3;
+}
