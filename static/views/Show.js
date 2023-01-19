@@ -1,6 +1,6 @@
 import AbstractView from "./AbstractView.js";
 
-const BASE_URL = "http://43.201.103.199";
+const BASE_URL = "https://43.201.103.199";
 let POSTID = null;
 
 export default class Show extends AbstractView{
