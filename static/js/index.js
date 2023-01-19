@@ -11,7 +11,7 @@ const navigateTo = url =>{
 
 const router = async()=>{
     const routes=[
-        {path:/^\/list$/, view: List},
+        {path: /^\/$/, view: List},
         {path: /^\/edit\/?[0-9]*$/, view: Edit},
         {path: /^\/show\/[0-9]+$/, view: Show},
     ];
@@ -22,10 +22,12 @@ const router = async()=>{
             isMatch: route.path.test(location.pathname)
         }
     });
+    console.log(location.pathname);
 
     let match = potentialMatches.find(potentialMatch => 
         potentialMatch.isMatch);
 
+    console.log("match:", match);
     if(!match){
         match = {
             route: {path: "404-not-found", view: NotFound},
@@ -58,7 +60,6 @@ document.addEventListener("DOMContentLoaded",()=>{
         if (e.target.id==="EditImageChange") {
             edit.getImage("clicked");
         }
-
 
         //if show page
         //executeDelete() occurs first||

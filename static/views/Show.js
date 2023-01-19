@@ -8,7 +8,7 @@ export default class Show extends AbstractView{
     constructor(){
         super();
         this.setTitle("HPNY 2023 - Post");
-        this.setBackLink("/list");
+        this.setBackLink("/");
         POSTID = this.getPostId();
     }
 
@@ -126,7 +126,7 @@ export default class Show extends AbstractView{
             <div id="ShowAlert">
                 <div id="ShowAlertMessage">
                 정말 삭제하시겠습니까?<br/>
-                <button id="ShowAlertDeleteBtn" data-link ="/list">삭제</button>
+                <button id="ShowAlertDeleteBtn" data-link ="/">삭제</button>
                 <button id="ShowAlertCancleBtn">취소</button>
                 </div>
             </div>

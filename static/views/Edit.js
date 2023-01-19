@@ -15,7 +15,7 @@ export default class Edit extends AbstractView{
         content = "";
         POSTID = this.getPostId();
         if (POSTID) this.setBackLink(`/show/${POSTID}`);
-        else this.setBackLink("/list");
+        else this.setBackLink("/");
     }
 
     async getImage(clicked){
@@ -58,7 +58,6 @@ export default class Edit extends AbstractView{
 
 
     async addPost(){
-        
         const title = document.getElementById("EditTitle").getElementsByTagName("input")[0].value;
         const content = document.getElementById("EditContent").getElementsByTagName("textarea")[0].value;
         const image = document.getElementById("EditImage").getElementsByTagName("img")[0].src;
@@ -96,7 +95,7 @@ export default class Edit extends AbstractView{
             <div id="EditContent">
                 <textarea placeholder="내용을 입력하세요...">${content}</textarea>
             </div>
-            <button id="EditAddBtn" data-link="/list">등록하기</button>
+            <button id="EditAddBtn" data-link="/">등록하기</button>
         </div>
         `;
         

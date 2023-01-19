@@ -18,7 +18,10 @@ export default class AbstractView{
     }
 
     getPostId(){
-        return location.pathname.split("/")[2];
+        const lastidx = location.pathname.lastIndexOf("/");
+        const locateTo = location.pathname.slice(lastidx+1, location.pathname.length);
+        console.log(locateTo);
+        if (!isNaN(locateTo)) return locateTo;
     }
 
     async getHtml(){
