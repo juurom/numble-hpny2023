@@ -20,7 +20,7 @@ const router = async()=>{
     let locateTo = "/";
     let lastidx = location.pathname.lastIndexOf("/");
     let postId = location.pathname.slice(lastidx+1, location.pathname.length);
-    if (!isNaN(postId)) {
+    if (!Number.isNaN(postId)) {
         console.log("postId is number:",postId);
         let postIdFor = location.pathname.slice(0, lastidx);
         lastidx = postIdFor.lastIndexOf("/");

@@ -1,7 +1,7 @@
 import AbstractView from "./AbstractView.js";
 
 const UNSPLASH_URL = "https://api.unsplash.com/photos/random?client_id=eqYyvjr-ziiTM28CnPklAKC2OGO9z-vYnzOycwr5VaE"
-const BASE_URL = "https://43.201.103.199";
+const BASE_URL = "api";
 let POSTID = null;
 let IMAGEURL = "";
 let title = "";

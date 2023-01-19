@@ -1,6 +1,6 @@
 import AbstractView from "./AbstractView.js";
 
-const BASE_URL = "https://43.201.103.199";
+const BASE_URL = "api";
 
 export default class List extends AbstractView{
     constructor(){
