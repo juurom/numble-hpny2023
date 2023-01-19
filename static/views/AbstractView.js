@@ -20,7 +20,6 @@ export default class AbstractView{
     getPostId(){
         const lastidx = location.pathname.lastIndexOf("/");
         const locateTo = location.pathname.slice(lastidx+1, location.pathname.length);
-        console.log("locateTo(abstractview.js):", locateTo);
         const numcheck = /^\d+$/;
         if (numcheck.test(locateTo)) return locateTo;
     }

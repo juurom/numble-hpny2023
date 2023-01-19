@@ -60,10 +60,7 @@ export default class Edit extends AbstractView{
     async addPost(){
         const title = document.getElementById("EditTitle").getElementsByTagName("input")[0].value;
         const content = document.getElementById("EditContent").getElementsByTagName("textarea")[0].value;
-        const image = document.getElementById("EditImage").getElementsByTagName("img")[0].src;
-
-        console.log("fetchto:",BASE_URL+"/post");        
-        
+        const image = document.getElementById("EditImage").getElementsByTagName("img")[0].src;        
         const res = await fetch(BASE_URL+"/post", {
             method: 'POST',
             headers: {
@@ -75,7 +72,6 @@ export default class Edit extends AbstractView{
                 "image": image,
             }),
         })
-        console.log(res);
         const data = await res.json();
     }
 

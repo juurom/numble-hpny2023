@@ -29,10 +29,7 @@ export default class Show extends AbstractView{
     }
 
     async getPost(){
-        console.log("getpost (in list.js)")
-        console.log("fetchto:",BASE_URL+"/post/"+POSTID);        
         const res = await fetch(BASE_URL+"/post/"+POSTID, { credentials: "include" });
-        console.log(res);    
         const data = await res.json();
         const postdata = data.data;
         return postdata;
@@ -85,7 +82,6 @@ export default class Show extends AbstractView{
     }
 
     async getHtml(){
-        console.log("gethtml(in show.js)")
         const postdata = await this.getPost();
         const post = postdata.post;
         const comments = postdata.comments;

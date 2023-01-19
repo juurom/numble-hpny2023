@@ -49,7 +49,6 @@ const router = async()=>{
     };
 
     const view = new match.route.view();
-    console.log("now go to gethtml()...")
     document.querySelector("#App").innerHTML = await view.getHtml();
 
 };
