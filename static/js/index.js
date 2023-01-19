@@ -20,7 +20,8 @@ const router = async()=>{
     let locateTo = "/";
     let lastidx = location.pathname.lastIndexOf("/");
     let postId = location.pathname.slice(lastidx+1, location.pathname.length);
-    if (!Number.isNaN(postId)) {
+    const numcheck = /^\d+$/;
+    if (numcheck.test(postId)) {
         let postIdFor = location.pathname.slice(0, lastidx);
         lastidx = postIdFor.lastIndexOf("/");
         postIdFor = postIdFor.slice(lastidx, postIdFor.length);
@@ -48,6 +49,7 @@ const router = async()=>{
     };
 
     const view = new match.route.view();
+    console.log("now go to gethtml()...")
     document.querySelector("#App").innerHTML = await view.getHtml();
 
 };
