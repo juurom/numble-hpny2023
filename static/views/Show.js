@@ -30,8 +30,8 @@ export default class Show extends AbstractView{
 
     async getPost(){
         console.log("getpost (in list.js)")
-        console.log("fetchto:",BASE_URL+"/posts/"+POSTID);        
-        const res = await fetch(BASE_URL+"/post/"+POSTID);
+        console.log("fetchto:",BASE_URL+"/post/"+POSTID);        
+        const res = await fetch(BASE_URL+"/post/"+POSTID, { credentials: true });
         console.log(res);    
         const data = await res.json();
         const postdata = data.data;
