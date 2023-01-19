@@ -16,8 +16,23 @@ const router = async()=>{
         {path: /^\/show\/[0-9]+$/, view: Show},
     ];
 
-    const lastidx = location.pathname.lastIndexOf("/");
-    const locateTo = location.pathname.slice(lastidx, location.pathname.length);
+    
+    let locateTo = "/";
+    let lastidx = location.pathname.lastIndexOf("/");
+    let postId = location.pathname.slice(lastidx+1, location.pathname.length);
+    if (!isNaN(postId)) {
+        console.log("postId is number:",postId);
+        let postIdFor = location.pathname.slice(0, lastidx);
+        lastidx = postIdFor.lastIndexOf("/");
+        postIdFor = postIdFor.slice(lastidx, postIdFor.length);
+        console.log("postIdFor:",postIdFor);
+        locateTo = postIdFor + "/"+ postId;
+        console.log("case 1 locateTo:",locateTo)
+    }
+    else{
+        locateTo = "/" + postId;
+        console.log("case 2 locateTo:",locateTo)
+    }
 
     const potentialMatches = routes.map(route=>{
         return {
@@ -25,7 +40,6 @@ const router = async()=>{
             isMatch: route.path.test(locateTo)
         }
     });
-    console.log("locateTo(index.js):",locateTo);
 
     let match = potentialMatches.find(potentialMatch => 
         potentialMatch.isMatch);

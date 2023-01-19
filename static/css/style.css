@@ -222,7 +222,9 @@ html::-webkit-scrollbar {
 #ShowComment{
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    padding: 10px 5px;
+    margin-top: 10px;
+    border-bottom: 1px solid grey;
 }
 
 #ShowCommentItem{
