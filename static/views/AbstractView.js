@@ -20,7 +20,7 @@ export default class AbstractView{
     getPostId(){
         const lastidx = location.pathname.lastIndexOf("/");
         const locateTo = location.pathname.slice(lastidx+1, location.pathname.length);
-        console.log(locateTo);
+        console.log("locateTo(edit.js):",locateTo);
         if (!isNaN(locateTo)) return locateTo;
     }
 

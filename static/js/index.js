@@ -16,13 +16,16 @@ const router = async()=>{
         {path: /^\/show\/[0-9]+$/, view: Show},
     ];
 
+    const lastidx = location.pathname.lastIndexOf("/");
+    const locateTo = location.pathname.slice(lastidx, location.pathname.length);
+
     const potentialMatches = routes.map(route=>{
         return {
             route: route,
-            isMatch: route.path.test(location.pathname)
+            isMatch: route.path.test(locateTo)
         }
     });
-    console.log(location.pathname);
+    console.log("locateTo(index.js):",locateTo);
 
     let match = potentialMatches.find(potentialMatch => 
         potentialMatch.isMatch);
