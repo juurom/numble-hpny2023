@@ -12,7 +12,7 @@ export default class List extends AbstractView{
     async getList(){
         console.log("getlist (in list.js)")
         console.log("fetchto:",BASE_URL+"/posts");        
-        const res = await fetch(BASE_URL+"/posts" ,{ credentials: 'include'});
+        const res = await fetch(BASE_URL+"/posts" );
         console.log(res);    
         const data = await res.json();
         const list = data.data.posts;
