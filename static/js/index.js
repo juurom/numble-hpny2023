@@ -21,17 +21,13 @@ const router = async()=>{
     let lastidx = location.pathname.lastIndexOf("/");
     let postId = location.pathname.slice(lastidx+1, location.pathname.length);
     if (!Number.isNaN(postId)) {
-        console.log("postId is number:",postId);
         let postIdFor = location.pathname.slice(0, lastidx);
         lastidx = postIdFor.lastIndexOf("/");
         postIdFor = postIdFor.slice(lastidx, postIdFor.length);
-        console.log("postIdFor:",postIdFor);
         locateTo = postIdFor + "/"+ postId;
-        console.log("case 1 locateTo:",locateTo)
     }
     else{
         locateTo = "/" + postId;
-        console.log("case 2 locateTo:",locateTo)
     }
 
     const potentialMatches = routes.map(route=>{
@@ -44,7 +40,6 @@ const router = async()=>{
     let match = potentialMatches.find(potentialMatch => 
         potentialMatch.isMatch);
 
-    console.log("match:", match);
     if(!match){
         match = {
             route: {path: "404-not-found", view: NotFound},
@@ -54,6 +49,7 @@ const router = async()=>{
 
     const view = new match.route.view();
     document.querySelector("#App").innerHTML = await view.getHtml();
+
 };
 
 
