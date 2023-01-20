@@ -14,10 +14,7 @@
 
 # 실행 방법
 ***
-1. `clone` 프로젝트
-2. 콘솔창에 `npm i express`로 express 설치
-3. 콘솔창에 `npm start`
-4. `localhost:7960/` 접속
+https://github.com/Numble-VanilaJS-Challenge/new-year-message-juurom
 
 
 # 스크린샷
